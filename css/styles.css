@@ -55,10 +55,8 @@ body {
 
 .container {
   max-width: 1158px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
 button {
@@ -114,12 +112,13 @@ button {
 
 /* ============= PAGE HEADER ============= */
 .header {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 24px;
-  padding-bottom: 24px;
   border-bottom: 1px solid var(--accent);
   background: var(--white-background);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
 }
 
 .navigation {
@@ -148,6 +147,8 @@ button {
 }
 
 .menu {
+  padding-top: 24px;
+  padding-bottom: 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -155,6 +156,8 @@ button {
 }
 
 .menu-link {
+  padding-top: 24px;
+  padding-bottom: 24px;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
@@ -176,6 +179,8 @@ button {
 }
 
 .contacts-link {
+  display: inline-block;
+  padding: 24px 0;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.32px;
@@ -203,7 +208,7 @@ button {
 }
 
 .main-title {
-  width: 496px;
+  max-width: 496px;
   text-align: center;
   font-size: 56px;
   line-height: 1.07;
@@ -212,6 +217,8 @@ button {
 }
 
 .main-button {
+  min-width: 169px;
+  height: 56px;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -219,6 +226,8 @@ button {
   letter-spacing: 0.64px;
   color: var(--white-background);
   background-color: var(--primary-brand);
+  border: none;
+  border-radius: 4px;
 }
 
 .main-button:hover,
@@ -230,7 +239,7 @@ button {
 /* ================ BENEFITS ================ */
 .benefits {
   padding-top: 120px;
-  padding-bottom: 60px;
+  padding-bottom: 120px;
 }
 
 .benefits-list {
@@ -250,13 +259,12 @@ button {
 
 /* ================ WHAT ARE WE DOING ================ */
 .activities {
-  padding-top: 60px;
   padding-bottom: 120px;
 }
 
 .activities-list {
   display: flex;
-  column-gap: 24px;
+  gap: 24px;
 }
 
 .activities-item {
@@ -285,15 +293,18 @@ button {
 
 .team-card {
   flex-basis: calc((100% - 72px) / 4);
-  padding-bottom: 32px;
   background: var(--white-background);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team-card-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  margin-bottom: 32px;
+}
+
+.team-card-thumb {
+  padding: 32px 0;
 }
 
 .team-card-title {
@@ -303,15 +314,13 @@ button {
 
 /* ================ FOOTER ================ */
 .footer {
-  padding-top: 101px;
-  padding-bottom: 100px;
+  padding: 100px 0;
   background-color: var(--dark);
 }
 
-.footer-container {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
+.footer-logo {
+  display: inline-block;
+  margin-bottom: 16px;
 }
 
 .footer-text {
@@ -328,15 +337,11 @@ button {
 
 .filter-list {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
   gap: 24px;
-  width: 586px;
-  margin: 0 auto 72px auto;
-}
-
-.filter-item {
-  flex-basis: calc((100% - 96px) / 5);
+  /* width: 586px; */
+  /* margin: 0 auto 72px auto; */
+  margin-bottom: 72px;
 }
 
 .filter-button {
@@ -349,12 +354,15 @@ button {
   letter-spacing: 0.64px;
   color: var(--primary-brand);
   background: var(--light);
+  border: 1px solid var(--accent);
+  border-radius: 4px;
 }
 
 .filter-button:hover,
 .filter-button:focus {
   color: var(--white-background);
   background: var(--pressed-state);
+  border: 1px solid transparent;
 }
 
 .projects-list {
@@ -367,27 +375,25 @@ button {
 }
 
 .project-card {
-  flex-basis: calc((100% - 48px) / 3);
-  padding-bottom: 32px;
+  width: calc((100% - 48px) / 3);
   background: var(--white-background);
-  border-bottom: 1px solid var(--accent);
   background: var(--white-background);
 }
 
-.project-img {
+.project-card-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  margin-bottom: 32px;
+}
+
+.project-card-thumb {
+  padding: 32px 16px;
+  border: 1px solid var(--accent);
+  border-top: none;
 }
 
 .project-card-title {
-  padding: 0 16px;
   margin-bottom: 8px;
-}
-
-.project-card-text {
-  padding: 0 16px;
 }
 
 /* ================ /PORTFOLIO ================ */
